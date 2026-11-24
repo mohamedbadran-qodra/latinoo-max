@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latinoo Max — Premium Restaurant &amp; Digital Menu | Cairo</title>
+  <meta name="description" content="Latinoo Max — premium burgers, pizza, pasta, milkshakes and grills in Faqous. Browse the digital menu, order online and pay cash on delivery or via WhatsApp. Delicious Food, Great Mood.">
+  <meta name="keywords" content="Latinoo Max, restaurant Faqous, burger, pizza, pasta, milkshake, food delivery Egypt, مطعم, فاقوس">
+  <meta name="author" content="Latinoo Max">
+  <meta name="theme-color" content="#0e0d0b">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Latinoo Max — Delicious Food, Great Mood">
+  <meta property="og:description" content="Premium burgers, pizza, pasta, milkshakes and grills in Faqous. Order online now.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:locale" content="en_EG">
+  <meta property="og:locale:alternate" content="ar_EG">
+  <!-- Structured data: Restaurant -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Latinoo Max",
+    "servesCuisine": ["Burgers", "Pizza", "Pasta", "Grill", "Middle Eastern"],
+    "priceRange": "EGP 12 - EGP 410",
+    "currenciesAccepted": "EGP",
+    "paymentAccepted": "Cash, WhatsApp Order",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Al-Adawi Street",
+      "addressLocality": "Faqous",
+      "addressCountry": "EG"
+    },
+    "openingHours": "Mo-Su 11:00-01:00",
+    "telephone": "+201040580225",
+    "acceptsReservations": "True",
+    "menu": "https://mohamedbadran-qodra.github.io/latinoo-max/#/menu"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600;700;800&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e0d0b'/%3E%3Ctext x='32' y='42' font-family='Georgia' font-size='30' fill='%23c9a24b' text-anchor='middle'%3ELM%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <div id="announce"></div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#/" class="logo" id="siteLogo" aria-label="Latinoo Max — Home"></a>
+      <nav class="nav" id="mainNav" aria-label="Main navigation"></nav>
+      <div class="header-actions">
+        <button class="lang-btn" id="langBtn" type="button" aria-label="Switch language">العربية</button>
+        <a href="#/cart" class="cart-btn" id="cartBtn" aria-label="Shopping cart">
+          <span aria-hidden="true">🛒</span>
+          <span id="cartLabel">Cart</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </a>
+        <button class="burger" id="burgerBtn" type="button" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+    <div class="container">
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation"></nav>
+    </div>
+  </header>
+
+  <!-- All pages render here -->
+  <main id="view" aria-live="polite"></main>
+
+  <footer class="footer" id="siteFooter"></footer>
+
+  <!-- Product details modal -->
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true">
+    <div class="modal" id="modalBox"></div>
+  </div>
+
+  <!-- Mobile sticky cart bar -->
+  <a href="#/cart" class="mobile-cart-bar" id="mobileCartBar" style="display:none">
+    <span id="mobileCartText">View Cart</span>
+    <span id="mobileCartTotal"></span>
+  </a>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <!-- App scripts (order matters: data → i18n → app → admin) -->
+  <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
